@@ -1,0 +1,36 @@
+[project]
+name = "azuremlops-exam"
+version = "0.1.0"
+description = "TOML file for MLOps exam"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "azure-ai-ml>=1.32.0",
+    "azure-identity>=1.25.3",
+    "joblib>=1.5.3",
+    "ruff>=0.15.6",
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true

@@ -1,0 +1,16 @@
+name: model-env
+channels:
+- conda-forge
+- anaconda
+dependencies:
+  # Set in https://github.com/Azure/AzureML-Containers
+  - python=3.10
+  - scikit-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - pip
+  - pip:
+    - azureml-mlflow==1.60.0.post1
+    - azureml-ai-monitoring
+    - azureml-inference-server-http

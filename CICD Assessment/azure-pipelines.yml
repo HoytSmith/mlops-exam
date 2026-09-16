@@ -1,0 +1,99 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- master
+- dev
+- feature/*
+
+resources:
+- repo: self
+
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: '6d1466cd-1df5-4992-8ad5-e5659a0b95f6'
+  dockerRegistryServiceConnectionName: 'acrexamreposgcoY'
+  imageRepository: 'hoyt-smith'
+  containerRegistry: 'acrexamreposgcoy.azurecr.io'
+  dockerfilePath: '**/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+  # Environment Deployment depends on branch
+  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    environmentDeployment: 'hoyt-smith.hoyt-smith-dev'
+  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+    environmentDeployment: 'hoyt-smith.hoyt-smith-prod'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.13'
+        addToPath: true
+        architecture: 'x64'
+
+    - script: curl -LsSf https://astral.sh/uv/install.sh | sh  # Install uv
+
+    - script: |
+        uv sync
+        uv run pytest --junitxml=junit/test-results.xml --cov=. --cov-report=xml
+      displayName: 'Install dependencies and test with pytest'
+    
+    - task: PublishTestResults@2
+      condition: succeededOrFailed()
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/test-*.xml'
+    
+    - task: PublishCodeCoverageResults@2
+      condition: succeededOrFailed()
+      inputs:
+        summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
+    
+    - script: uv run ruff check --output-format=azure .
+      displayName: 'Run ruff linter'
+
+    - script: uv run ruff format --check .
+      displayName: 'Run ruff formatter'
+
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePath)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+
+    - upload: manifests
+      artifact: manifests
+
+# DO NOT MODIFY FROM HERE
+- stage: Deploy
+  displayName: Deploy stage
+  dependsOn: Build
+  condition: and(succeeded(), ne(variables['environmentDeployment'], ''))
+
+  jobs:
+  - job: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - script: |
+        echo Environment to be deployed: $(environmentDeployment)
+      displayName: 'Display Environment to be deployed'
+
