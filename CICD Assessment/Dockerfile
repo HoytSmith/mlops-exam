@@ -9,11 +9,9 @@ WORKDIR /app
 
 RUN uv sync --frozen --no-cache
 
-RUN --mount=type=secret,id=SECRET,env=SECRET
-
 ENV PORT=8000
 EXPOSE ${PORT}
 
-LABEL maintainer=hoyt.smith@itvitaelearning.nl
+LABEL maintainer="email-withheld"
 
 CMD ["uv", "run", "fastapi", "run"]
