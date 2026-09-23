@@ -1,6 +1,6 @@
-# Hyperparameter Tuning Assessment
+# Parameter Tuning Assessment
 
-This project demonstrates a scalable hyperparameter tuning workflow for a machine learning model using Azure ML. The goal was to optimize a Random Forest model efficiently while following best practices for reproducibility, parallel execution, and model tracking.
+This project demonstrates a scalable hyperparameter tuning workflow for a machine learning model using Azure ML. It reflects a production-style approach to model optimization and experimentation, with a focus on automation, reproducibility, and efficient model selection.
 
 ## Overview
 
@@ -32,7 +32,7 @@ The tuning process explores the following parameter grid:
 - max_features: 3, 4, 5
 - n_estimators: 100, 250
 
-The search space was designed to evaluate how different feature subsets and tree counts affect model performance, while remaining scalable and suitable for parallel execution.
+The search space was designed to evaluate how different feature subsets and tree counts affect model performance while remaining scalable and suitable for parallel execution.
 
 ## Azure ML Workflow
 
@@ -73,4 +73,4 @@ The best model is registered using MLflow so it can be versioned and reused in d
 
 ## Outcome
 
-This project showcases a scalable approach to model optimization beyond traditional local grid search. It highlights how Azure ML can be used to run parallelized tuning for machine learning models in a more production-ready and maintainable way.
+This project showcases a scalable approach to model optimization beyond traditional local grid search. It highlights how Azure ML can be used to run parallelized tuning for machine learning models in a more production-ready and maintainable way, reinforcing my understanding of practical MLOps workflows and model lifecycle management.
