@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: examapp 
-          image: itvitaecontainerregistry.azurecr.io/examapp
+          image: image-url-withheld
           ports:
           - containerPort: 8000
