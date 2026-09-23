@@ -117,39 +117,3 @@ Across these assessments, I have demonstrated practical skills in the following 
 This repository shows that I am not only comfortable with model development, but also with the operational realities of building machine learning systems that can be reproduced, scaled, monitored, and deployed. It reflects a hands-on understanding of the full MLOps lifecycle, from experimentation and tuning to automation and infrastructure.
 
 The projects were designed as a realistic exam challenge and reflect the type of work expected from a modern ML or MLOps engineer in industry: combining data science, engineering discipline, automation, and deployment practices.
-
----
-
-## Repository Structure
-
-```text
-mlops-exam/
-├── README.md
-├── ML Assessment/
-│   ├── exam-ml.ipynb
-│   ├── shap.ipynb
-│   └── ...
-├── Parameter Tuning Assessment/
-│   ├── hyperparameter_tuning.py
-│   ├── diabetes_hyperdrive/
-│   └── ...
-├── CICD Assessment/
-│   ├── app/
-│   ├── Dockerfile
-│   ├── azure-pipelines.yml
-│   └── ...
-├── Terraform Assessment/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── output.tf
-│   └── ...
-└── ...
-```
-
----
-
-## Conclusion
-
-This portfolio is a reflection of my learning journey in Machine Learning and MLOps and my ability to apply those concepts in real, practical settings. It showcases both analytical and engineering strengths and is intended to highlight my readiness to contribute in a professional environment focused on AI, ML engineering, and cloud-based MLOps.
-
-I am building this repository as part of my public portfolio to demonstrate what I have learned, what I can do, and how I think about end-to-end ML delivery in production.

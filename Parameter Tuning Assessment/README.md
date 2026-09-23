@@ -71,10 +71,6 @@ The best model is registered using MLflow so it can be versioned and reused in d
 - ML lifecycle best practices
 - experiment tracking and reproducibility
 
-## Project Outcome
+## Outcome
 
 This project showcases a scalable approach to model optimization beyond traditional local grid search. It highlights how Azure ML can be used to run parallelized tuning for machine learning models in a more production-ready and maintainable way.
-
-## Conclusion
-
-This project demonstrates practical experience in automated model optimization and MLOps workflows. By combining hyperparameter tuning, model tracking, and registration in Azure ML, it reflects the kind of end-to-end machine learning pipeline used in real-world applications.
