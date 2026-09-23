@@ -41,7 +41,7 @@ The application was structured to follow a typical development lifecycle:
 - Ruff
 - Pytest
 
-## Key Skills Demonstrated
+## Skills Demonstrated
 
 - CI/CD pipeline design
 - Dockerization

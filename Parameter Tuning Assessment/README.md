@@ -62,7 +62,7 @@ The best model is registered using MLflow so it can be versioned and reused in d
 - pandas
 - numpy
 
-## Key Skills Demonstrated
+## Skills Demonstrated
 
 - machine learning model tuning
 - distributed hyperparameter search

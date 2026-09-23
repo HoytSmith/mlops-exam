@@ -72,3 +72,7 @@ This notebook focuses on deep learning and model interpretability using Fashion-
 - deep learning with CNNs
 - SHAP-based model explainability
 - result interpretation and communication
+
+## Outcome
+
+This assessment demonstrates a strong foundation in both classical machine learning and deep learning explainability. It shows the ability to prepare data, train and tune models, evaluate results rigorously, and interpret model behavior in ways that support real-world decision-making. The combination of predictive modeling and explainability reflects a practical understanding of how machine learning systems should be evaluated, communicated, and trusted in professional settings.
