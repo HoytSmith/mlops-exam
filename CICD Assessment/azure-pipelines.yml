@@ -13,10 +13,10 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '6d1466cd-1df5-4992-8ad5-e5659a0b95f6'
+  dockerRegistryServiceConnection: 'connection-id-withheld'
   dockerRegistryServiceConnectionName: 'acrexamreposgcoY'
   imageRepository: 'hoyt-smith'
-  containerRegistry: 'acrexamreposgcoy.azurecr.io'
+  containerRegistry: 'container-url-withheld'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
 
