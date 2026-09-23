@@ -1,6 +1,6 @@
 # Machine Learning Assessment
 
-This project contains two exploratory machine learning notebooks focused on model development, evaluation, and model explainability.
+This project contains two exploratory machine learning workflows focused on model development, evaluation, and explainability. Together, they highlight my ability to work across both classical machine learning and modern deep learning practices while keeping the analysis grounded in real-world interpretation and business relevance.
 
 ## Overview
 
@@ -9,9 +9,9 @@ The assessment covers two complementary tasks:
 1. A classical machine learning workflow using a breast cancer dataset
 2. A deep learning explainability workflow using Fashion-MNIST and SHAP
 
-Together, these notebooks demonstrate how to prepare data, train models, evaluate performance, and interpret predictions.
+Together, these notebooks demonstrate how to prepare data, train models, evaluate performance, and interpret predictions in a way that supports decision-making and trust in model outputs.
 
-The assessment also required a powerpoint presentation going over the project, aimed at fellow Data Scientists. This presentation is included in the project for those interested.
+The assessment also required a powerpoint presentation for fellow Data Scientists, and this project includes the presentation for those interested.
 
 ---
 
@@ -20,6 +20,7 @@ The assessment also required a powerpoint presentation going over the project, a
 This notebook explores a supervised classification problem using a breast cancer dataset stored in ARFF format.
 
 ### Objectives
+
 - inspect and clean the dataset
 - handle missing values
 - encode target labels
@@ -29,14 +30,15 @@ This notebook explores a supervised classification problem using a breast cancer
 - identify the most important features
 
 ### Workflow
-- Load the dataset and examine its structure
-- Detect missing values and replace them with column means
-- Encode the target variable to numeric values
-- Train/test split with a fixed random seed
-- Use GridSearchCV to tune hyperparameters for an SVC model
-- Evaluate the model with accuracy, precision, recall, F1 score, and confusion matrix
-- Visualize the model’s classification results
-- Rank features by importance based on the learned coefficients
+
+- load the dataset and examine its structure
+- detect missing values and replace them with column means
+- encode the target variable to numeric values
+- perform a train/test split with a fixed random seed
+- use GridSearchCV to tune hyperparameters for an SVC model
+- evaluate the model with accuracy, precision, recall, F1 score, and confusion matrix
+- visualize the model’s classification results
+- rank features by importance based on the learned coefficients
 
 ---
 
@@ -45,6 +47,7 @@ This notebook explores a supervised classification problem using a breast cancer
 This notebook focuses on deep learning and model interpretability using Fashion-MNIST.
 
 ### Objectives
+
 - load and preprocess the Fashion-MNIST dataset
 - train a Convolutional Neural Network (CNN)
 - visualize training progress
@@ -52,13 +55,14 @@ This notebook focuses on deep learning and model interpretability using Fashion-
 - explore how the model distinguishes between visually similar classes
 
 ### Workflow
-- Download and reshape the Fashion-MNIST dataset
-- Normalize pixel values for stable model training
-- Build a CNN architecture with convolutional and pooling layers
-- Train the model and track loss and accuracy
-- Use SHAP’s DeepExplainer to compute feature attributions
-- Visualize SHAP values for representative examples
-- Interpret which image regions influence classification decisions
+
+- download and reshape the Fashion-MNIST dataset
+- normalize pixel values for stable model training
+- build a CNN architecture with convolutional and pooling layers
+- train the model and track loss and accuracy
+- use SHAP’s DeepExplainer to compute feature attributions
+- visualize SHAP values for representative examples
+- interpret which image regions influence classification decisions
 
 ---
 
@@ -72,3 +76,7 @@ This notebook focuses on deep learning and model interpretability using Fashion-
 - deep learning with CNNs
 - SHAP-based model explainability
 - result interpretation and communication
+
+## Outcome
+
+This assessment demonstrates a strong foundation in both classical machine learning and deep learning explainability. It shows the ability to prepare data, train and tune models, evaluate results rigorously, and interpret model behavior in ways that support real-world decision-making. The combination of predictive modeling and explainability reflects a practical understanding of how machine learning systems should be evaluated, communicated, and trusted in professional settings.

@@ -1,6 +1,6 @@
 # Terraform Assessment
 
-This project demonstrates how to provision Databricks notebooks with Terraform in a repeatable and scalable way. The goal was to create a root Terraform module that deploys notebook files for multiple users, configures provider settings securely, and exposes the created notebook URLs as outputs.
+This project demonstrates my ability to automate cloud infrastructure with Terraform for Azure Databricks. The goal was to create a reusable configuration for provisioning notebooks across multiple users while keeping environment-specific values separate from source code and making deployment repeatable.
 
 ## Overview
 
@@ -113,6 +113,4 @@ This project showcases practical experience with:
 
 ## Outcome
 
-The final result is a reusable Terraform configuration that provisions Databricks notebooks for multiple users, keeps configuration flexible, and demonstrates a clean infrastructure automation workflow suitable for real-world cloud environments.
-
-This project highlights the ability to use Terraform to automate notebook deployment, manage infrastructure consistently, and follow best practices for configuration and environment handling.
+The final result is a reusable Terraform configuration that provisions Databricks notebooks for multiple users, keeps configuration flexible, and demonstrates a clean infrastructure automation workflow suitable for real-world cloud environments. This project highlights my ability to automate infrastructure in a repeatable, scalable, and production-friendly way.
