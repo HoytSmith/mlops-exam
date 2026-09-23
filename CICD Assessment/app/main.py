@@ -1,5 +1,4 @@
 # FastAPI app for Azure devops exercise
-# Style errors have been included
 import os
 import socket
 from math import sqrt
@@ -34,7 +33,7 @@ def hello_world():
         # to get the host ip
         ip = socket.gethostbyname(host)
     except socket.gaierror:
-        host = "unkown"
+        host = "unknown"
         ip = "unknown"
     message = os.getenv("MESSAGE", "FastAPI Demo")
     return f"{message} on host {host} ({ip})"

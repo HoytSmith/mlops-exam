@@ -6,13 +6,13 @@ import os
 
 # Global constants can be set via environmental variables
 # Remove default values in production
-AZURE_RESOURCE_GROUP = os.getenv("AZURE_RESOURCE_GROUP", "itvitae-exam")
-AZURE_SUBSCRIPTION_ID = os.getenv("AZURE_SUBSCRIPTION_ID", "34faeead-244d-4ae8-8194-1eeaaffaf5be")
+AZURE_RESOURCE_GROUP = os.getenv("AZURE_RESOURCE_GROUP", "resource-group-withheld")
+AZURE_SUBSCRIPTION_ID = os.getenv("AZURE_SUBSCRIPTION_ID", "subscription-id-withheld")
 AZURE_WORKSPACE_NAME = os.getenv(
     "AZURE_WORKSPACE_NAME",
-    "ws-Hoyt-Smith",
+    "workspace-name-withheld",
 )
-AZURE_LOCATION = os.getenv("AZURE_LOCATION", "westeurope")
+AZURE_LOCATION = os.getenv("AZURE_LOCATION", "location-withheld")
 # Choose names for your clusters
 AML_COMPUTE_NAME = os.getenv("AML_COMPUTE_NAME", "aml-compute")
 # General Servers Characteristics
